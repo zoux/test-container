@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang=zh-CN><head><meta name=version content=1.0.0><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><script>;(() => {
+        const ENV = "production"
+        const isDeploy = ENV === 'production'
+
+        if (!isDeploy) {
+          return
+        }
+
+        const script = document.createElement('script')
+        script.setAttribute('async', 'async')
+        script.setAttribute('src', 'https://stdd.webankcdn.net/epss/libs/web-report/weboard.js')
+        script.setAttribute('name', 'weboardH5')
+        script.setAttribute('app-id', 'H078502158')
+        script.setAttribute('account', 'hsfs-op-web')
+        const isTest = location.href.indexOf('.test.') !== -1
+        script.setAttribute('env', isTest ? 'test' : 'release')
+        script.setAttribute('auto-click-report', 'true')
+        script.setAttribute('auto-page-report', 'true')
+
+        document.querySelector('script').parentNode.insertBefore(script, document.querySelector('script'))
+      })()</script><title>努力加载中...</title><link href=./css/app.10f349f0.css rel=stylesheet></head><body><div id=app></div><script src=./js/chunk-vendors.71c646de.js></script><script src=./js/app.cf04e60d.js></script></body></html>
